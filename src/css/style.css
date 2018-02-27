@@ -8,10 +8,12 @@
   font-family: "Gotham-Medium";
   src: url("../00_Resources/01_Tipography/Gotham-Medium.otf");
 }
+
 @font-face {
   font-family: "Gotham-Book";
   src: url("../00_Resources/01_Tipography/Gotham-Book.otf");
 }
+
 @font-face {
   font-family: "Lato-Bold";
   src: url("../00_Resources/01_Tipography/Lato-Bold.ttf");
@@ -26,6 +28,7 @@
   font-family: "Lato-Regular";
   src: url("../00_Resources/01_Tipography/Lato-Regular.ttf");
 }
+
 @font-face {
   font-family: "Lato-Heavy";
   src: url("../00_Resources/01_Tipography/Lato-Heavy.ttf");
@@ -49,8 +52,8 @@ ________________________________________________________________________________
 */
 
 html {
-  max-width: 1400px;
-  width: 100%;
+  max-width: 2400px;
+  min-width: 700px;
   font-size: 14px;
 }
 
@@ -75,7 +78,6 @@ body {
 .hero--logo {
   position: relative;
   margin-bottom: var(--margin-top-let);
-  resize: both;
 }
 
 .hero--menu {
@@ -121,7 +123,7 @@ body {
   transform: scale(1, 1);
 }
 
-.menu--list >* a:hover, .menu--list >* a::before {
+.menu--list >* a:hover, .menu--list>* a::before {
   transition: color .3s, background-color .3s, transform .3s;
 }
 
@@ -134,6 +136,8 @@ body {
 }
 
 .hero--title img {
+  width: 100%;
+  height: auto;
   resize: both;
 }
 
@@ -156,6 +160,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  flex-wrap: wrap;
   position: relative;
   width: 100%;
 }
@@ -174,8 +179,9 @@ body {
 
 .content--title {
   font: 3em Lato-Heavy;
+  font-size: 5vmin;
   line-height: 1;
-  left: 38px;
+  left: 48px;
   margin: 0px;
   position: absolute;
   text-transform: uppercase;
@@ -183,18 +189,19 @@ body {
 
 .content--small {
   font: 1em Lato-Bold;
+  font-size: 2vmin;
   position: absolute;
-  right: 80px;
+  right: 8.3vw;
   top: 30px;
 }
 
 /*
- contecnt photos
+ content photos and coletion div
 
   */
 
 .content--photos {
-  position:relative;
+  position: relative;
   width: 100%;
 }
 
@@ -214,28 +221,49 @@ body {
   -o-transform: rotate(-90deg);
 }
 
+/*
+Photos content  all
+*/
+
 .photos--all {
-  margin-left: 28px;
+  margin-left: 38px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-}
-
-.photos--all .image--big,
-.photos--all .image--small {
-  margin: 10px;
-  resize: both;
   position: relative;
 }
 
-.image--big {
-  width: 620px;
-  height: 300px;
+/* set all the children with the same style propieties */
+.photos--all .image--big,
+.photos--all .image--small {
+  margin: 10px;
+  position: relative;
 }
 
+/* set all big images with the same style propieties */
+.image--big {
+  max-width: 620px;
+  max-height: 300px;
+}
+
+.image--big img,
+.image--small img {
+  width: 100%;
+  height: auto;
+  resize: both;
+}
+
+
+/* set all small images with the same style propieties */
+.image--small {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+/* set all hover images contents with the same style propieties */
 .hover-image--big {
-  width: 620px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, .9);
   position: absolute;
   padding: 40px 20px 10px 20px;
@@ -244,28 +272,44 @@ body {
   text-transform: uppercase;
 }
 
-.hover-image--big p {
-  color:  var(--white-color);
+.hover-image--small {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .9);
+  position: absolute;
+  padding: 40px 20px 10px 20px;
+  opacity: 0;
+  top: 0px;
+}
+
+.image--big:hover .hover-image--big,
+.image--small:hover .hover-image--small {
+  opacity: 0.7;
+  transition: opacity .3s ease-in-out;
+}
+
+.hover-image--big p,
+.hover-image--small p {
+  color: var(--white-color);
   font: 1.23em Gotham-Book;
   margin-top: 30px;
   margin-bottom: 0px;
-
 }
 
-.hover-image--big h2 {
-  color:  var(--white-color);
+.hover-image--big h2,
+.hover-image--small h2 {
+  color: var(--white-color);
   font: 35px/44px Gotham-Book;
   margin-top: 2px;
-
 }
 
 .button--big--1 {
   background: none;
-  border:none;
-  color:  var(--white-color);
+  border: none;
+  color: var(--white-color);
   cursor: pointer;
   font: 1.43em Lato-Regular;
-  bottom: 10px;
+  margin-top: 60px;
   position: relative;
 }
 
@@ -283,30 +327,13 @@ body {
   width: 60px;
 }
 
-
-.image--small {
-  width: 300px;
-  height: 300px;
-}
-
-.hover-image--small {
-  width: 300px;
-  height: 300px;
-  background-color: rgba(0, 0, 0, .9);
-  position: absolute;
-  opacity: 0;
-  top: 0px;
-}
-
-.image--big:hover .hover-image--big,
-.image--small:hover .hover-image--small {
-  opacity: 0.7;
-  transition: opacity .3s ease-in-out;;
-}
-
-
+/*
+ button more products
+  */
 
 .content--more {
+  background: none;
+  border: none;
   cursor: pointer;
   font: 1em Lato-regular;
   margin: 30px 0 40px 0;
@@ -333,12 +360,12 @@ body {
   transform: scale(1, 1);
 }
 
-.content--more:hover, .content--more::before {
+.content--more:hover,
+.content--more::before {
   transition: color .3s, background-color .3s, transform .3s;
 }
 
 /* footer section */
-
 .footer--store {
   color: var(--white-color);
   background: var(--black-color);
