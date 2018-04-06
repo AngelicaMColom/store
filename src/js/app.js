@@ -8,7 +8,6 @@ function changeAnimation() {
 }
 
 function activeMenu() {
-  console.log(menu);
   menu.classList.remove("no-active");
   menuList.classList.add("active");
 }
