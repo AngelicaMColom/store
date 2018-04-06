@@ -1,0 +1,10 @@
+$white-color: #FFF;
+$black-color: #000;
+$margin-top-and-bottom: 20px; // Variables Menu Icon
+$menu-icon-line-height: 2px;
+$menu-icon-line-space: 6px;
+$menu-icon-line-offsetY: $menu-icon-line-height + $menu-icon-line-space;
+$menu-icon-height: (3*$menu-icon-line-height) + (2*$menu-icon-line-space);
+$cubic-bezier-in: cubic-bezier(0.30,1,0.70,1);
+$color-letter-media: #353535;
+$cubic-bezier-out: cubic-bezier(1,0.70,1,0.30);
