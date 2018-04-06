@@ -1,0 +1,240 @@
+@import '_font.scss';
+/* comun variables */
+@import '_variables.scss';
+@import '_mixins.scss';
+
+/* media querys */
+@media (max-width: 40em) {
+  .content__colection,
+  .image__small,
+  .menu.no-active {
+    display: none;
+    visibility: hidden;
+  }
+
+  .hero {
+
+    &__logo {
+      margin-bottom: $margin-top-and-bottom;
+    }
+  }
+  .figure {
+    display: block;
+  }
+  .menu {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(245, 242, 240, 0.7);
+
+    &__list.active {
+      font-family: Lato-Regular;
+      font-size: 2.5rem;
+      flex-direction: column;
+      background-color: $white-color;
+      width: 90%;
+      height: 90%;
+      padding: 10px;
+      text-align: center;
+      padding: 20%;
+    }
+  }
+
+  .title {
+    margin-top: $margin-top-and-bottom;
+
+    &__text {
+      font-size: 3vw;
+      line-height: 21px;
+    }
+
+    &__img {
+      height: 200px;
+    }
+  }
+
+  .content {
+      padding:0 20px;
+    &__titles {
+      margin-bottom: 40px;
+
+      &__big {
+        font-size:1.5rem;
+      }
+
+      &__small {
+        font-size: 0.8rem;
+      }
+    }
+
+    &__photos {
+      &__image {
+        .image__big {
+          max-width: 600px;
+          max-height: 240px;
+        }
+        .photos__image__hover {
+          max-width: 600px;
+          max-height: 138px;
+          padding: 30px;
+          text-transform: uppercase;
+          color: $color-letter-media;
+          box-shadow: 0 2px 10px 0 rgba(0,0,0,0.3);
+          margin-bottom: 30px;
+          p {
+            font: 1.23em Gotham-Book;
+            margin-bottom: 0;
+          }
+
+          h2 {
+            font: 35px/44px Gotham-Book;
+            margin-top: 2px;
+          }
+          .button__big--1 {
+            font: 17px Lato-Regular;
+            font-weight: bold;
+            float: right;
+            bottom: 70px;
+            &::before {
+              background: $black-color;
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+@media (min-width: 42em) {
+  .hero {
+    &__logo {
+      margin-bottom: $margin-top-and-bottom;
+    }
+  }
+
+  .title {
+    margin-top: $margin-top-and-bottom;
+
+    &__text {
+      letter-spacing: 2px;
+    }
+  }
+
+  .figure {
+    display: none;
+    visibility: hidden;
+  }
+
+  .menu {
+    font-family: Gotham-Medium;
+    font-size: 0.875rem;
+    line-height: 2;
+    max-width: 100%;
+    margin: $margin-top-and-bottom;
+
+    &__list {
+      max-width: 100%;
+      align-items: flex-start;
+      padding: 0;
+    }
+  }
+
+  .content {
+    padding: 0 2%;
+
+    &__titles {
+      margin: 0 40px 30px;
+      &__big {
+        font-size: calc(2.13rem + 0.5Vmin);
+        line-height: 1;
+      }
+
+      &__small {
+        font-size: calc(0.875rem + 0.1Vmin);
+      }
+    }
+
+
+    .content__colection {
+      font: 12px/15px Lato-medium;
+      position: absolute;
+      line-height: 1;
+      top: 255px;
+      /* Rotate from top left corner (not default) */
+      -webkit-transform-origin: 0 0;
+      -moz-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+      -o-transform-origin: 0 0;
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+    }
+
+    &__photos {
+      margin: 0 30px;
+      /* set all big images with the same style propieties */
+      .image__big {
+        max-width: 620px;
+        max-height: 300px;
+      }
+      /* set all small images with the same style propieties */
+      .image__small {
+        max-width: 300px;
+        max-height: 300px;
+      }
+
+      &__image {
+        margin: 10px;
+        transition: all 2s ease-in-out;
+        .photos__image__hover {
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, .9);
+          padding: 40px 20px 10px;
+          opacity: 0;
+          text-transform: uppercase;
+          display: none;
+          p {
+            color: $white-color;
+            font: 1.23em Gotham-Book;
+            margin-top: 30px;
+            margin-bottom: 0;
+          }
+
+          h2 {
+            color: $white-color;
+            font: 35px/44px Gotham-Book;
+            margin-top: 2px;
+          }
+          .button__big--1 {
+            color: $white-color;
+            margin-top: 60px;
+            font: 1.43em Lato-Regular;
+            text-transform: lowercase;
+            &::before {
+              background: $white-color;
+            }
+          }
+        }
+
+        &:hover .photos__image__hover {
+          display: block;
+          opacity: 0.7;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}
