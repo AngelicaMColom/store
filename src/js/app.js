@@ -1,30 +1,23 @@
-const selectPhoto = document.querySelector('.photos--all');
-const bigBoxes = [...document.querySelectorAll('div')];
+const hamburger = document.querySelector(".menu-icon");
+const menu = document.querySelector(".menu");
+const menuList = document.querySelector(".menu__list");
 
-function hoverPrice(event) {
-  event.preventDefault();
-  console.log(event);
-  bigBoxes.forEach(box => {
-    console.log(box);
-    if (event.hasOwnProperty(box)) {
-      console.log(box);
-    }
-    else {
-      console.log("not");
-    }
-  }
-
-
-  )
-
+function changeAnimation() {
+  hamburger.classList.add("active");
+   activeMenu();
 }
 
+function activeMenu() {
+  console.log(menu);
+  menu.classList.remove("no-active");
+  menuList.classList.add("active");
+}
 
+function closeMenu() {
+  menu.classList.add("no-active");
+  menuList.classList.remove("active");
+  hamburger.classList.remove("active");
+}
 
-
-
-
-
-
-
-selectPhoto.addEventListener('mouseover', hoverPrice)
+hamburger.addEventListener("click", changeAnimation);
+menu.addEventListener("click", closeMenu);

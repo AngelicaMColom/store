@@ -14,117 +14,68 @@
 <body>
   <!-- head section  -->
   <header class="hero">
-    <figure class="hero--logo"><img src="01_Assets/Logo.png" alt="Logo_store"></figure>
-    <!-- menun section  -->
-    <nav class="hero--menu">
-      <ul class="menu--list">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">item menu</a></li>
-        <li><a href="#">item menu</a></li>
-        <li><a href="#">item menu</a></li>
-      </ul>
-    </nav>
-    <!-- banner and title section -->
-    <aside class="hero--title">
-      <img src="01_Assets/Image-hero.jpg" alt="Image-hero">
-      <h2 class="hero--title--text">free mearts, always free</h2>
-    </aside>
+    <figure class="hero__logo">
+      <img src="01_Assets/Logo.png" alt="Logo_store">
+    </figure>
   </header>
+  <!---menun section------------------------------>
+  <!-- hamburger responsive menu-->
+  <div class="figure">
+    <div class="figure__center">
+      <div class="menu-icon">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+      </div>
+    </div>
+  </div>
+  <!-- menun section -->
+  <nav class="menu no-active">
+    <ul class="menu__list">
+      <li><a class="menu__list__item" href="#">Home</a></li>
+      <li><a class="menu__list__item" href="#">About</a></li>
+      <li><a class="menu__list__item" href="#">Contact</a></li>
+      <li><a class="menu__list__item" href="#">item menu</a></li>
+      <li><a class="menu__list__item" href="#">item menu</a></li>
+      <li><a class="menu__list__item" href="#">item menu</a></li>
+    </ul>
+  </nav>
+  <!-- banner and title section -->
+  <aside class="title">
+    <img class="title__img" src="01_Assets/Image-hero.jpg" alt="Image-hero">
+    <h2 class="title__text">free mearts, always free</h2>
+  </aside>
   <!-- principal content -->
   <main class="content">
     <!-- titles  -->
-    <section class="content--titles">
-      <h1 class="content--title">A super title<br>or Something else her</h1>
-      <h3 class="content--small">125 products</h3>
-      <!-- photos section -->
+    <section class="content__titles">
+      <h1 class="content__titles__big">A super title<br>or Something else her</h1>
+      <h3 class="content__titles__small">125 products</h3>
     </section>
-    <section class="content--photos">
-      <p class="content--colection">collection available<br>from June 23 to August 31</p>
+    <!-- photos section -->
+    <aside class="content__colection">
+      <p>collection available<br>from June 23 to August 31</p>
+    </aside>
+
+    <section class="content__photos">
       <!-- photos contents -->
-      <article class="photos--all">
-        <aside class="image--big">
+        <aside class="content__photos__image image__big">
           <img src="01_Assets/01_Products/Product-1.jpg" alt="Product-1">
-          <div class="hover-image--big">
+          <div class="photos__image__hover">
             <p>Name of reference<br>Product here</p>
             <h2>$150</h2>
-            <button class="button--big--1">+ more</button>
+            <button class="button__big--1">+ More</button>
           </div>
         </aside>
-        <aside class="image--small">
-          <img src="01_Assets/01_Products/Product-2.jpg" alt="Product-2">
-          <div class="hover-image--small">
-            <p>Name of reference<br>Product here</p>
-            <h2>$150</h2>
-            <button class="button--big--1">+ more</button>
-          </div>
-        </aside>
-        <aside class="image--small">
-          <img src="01_Assets/01_Products/Product-3.jpg" alt="Product-3">
-          <div class="hover-image--small">
-            <p>Name of reference<br>Product here</p>
-            <h2>$150</h2>
-            <button class="button--big--1">+ more</button>
-          </div>
-        </aside>
-        <aside class="image--small">
-          <img src="01_Assets/01_Products/Product-4.jpg" alt="Product-4">
-          <div class="hover-image--small">
-            <p>Name of reference<br>Product here</p>
-            <h2>$150</h2>
-            <button class="button--big--1">+ more</button>
-          </div>
-        </aside>
-        <aside class="image--small">
-          <img src="01_Assets/01_Products/Product-5.jpg" alt="Product-5">
-          <div class="hover-image--small">
-            <p>Name of reference<br>Product here</p>
-            <h2>$150</h2>
-            <button class="button--big--1">+ more</button>
-          </div>
-        </aside>
-        <aside class="image--big">
-          <img src="01_Assets/01_Products/Product-6.jpg" alt="Product-6">
-          <div class="hover-image--big">
-            <p>Name of reference<br>Product here</p>
-            <h2>$150</h2>
-            <button class="button--big--1">+ more</button>
-          </div>
-        </aside>
-        <aside class="image--big">
-          <img src="01_Assets/01_Products/Product-7.jpg" alt="Product-7">
-          <div class="hover-image--big">
-            <p>Name of reference<br>Product here</p>
-            <h2>$150</h2>
-            <button class="button--big--1">+ more</button>
-          </div>
-        </aside>
-        <aside class="image--small">
-          <img src="01_Assets/01_Products/Product-8.jpg" alt="Product-8">
-          <div class="hover-image--small">
-            <p>Name of reference<br>Product here</p>
-            <h2>$150</h2>
-            <button class="button--big--1">+ more</button>
-          </div>
-        </aside>
-        <aside class="image--small">
-          <img src="01_Assets/01_Products/Product-9.jpg" alt="Product-9">
-          <div class="hover-image--small">
-            <p>Name of reference<br>Product here</p>
-            <h2>$150</h2>
-            <button class="button--big--1">+ more</button>
-          </div>
-        </aside>
-      </article>
     </section>
     <!-- button for more -->
-    <button class="content--more">More productos</button>
+    <button class="content__more">More productos</button>
   </main>
   <!-- footer section  -->
-  <footer class="footer--store">Something here all rights reserverd. 2018</footer>
-  <script src="js/app.js" type="text/javascript">
-  </script>
+  <footer class="footer__store">Something here all rights reserverd. 2018</footer>
+  <script src="js/app.js" type="text/javascript"></script>
+  <script src="js/main.js" type="text/javascript"></script>
+
 </body>
 
 </html>
